@@ -2,6 +2,10 @@
   "expo": {
     "name": "EffiAgro",
     "slug": "EffiAgro",
+    "plugins": [
+      "expo-apple-authentication"
+    ],
+    "scheme": "effiagro",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,9 +19,12 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.heitor.effiagro",
+      "usesAppleSignIn": true
     },
     "android": {
+      "package": "com.heitor.effiagro",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +32,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "17627ade-afc6-4182-8a17-f2761141137b"
+      },
+      "react-native-fbsdk-next": {
+        "appID": "871397000994223",
+        "clientToken": "3116296cfd9314eb053519c16f5497df",
+        "displayName": "EffiAgro"
+      }
     }
   }
 }
